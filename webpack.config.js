@@ -15,7 +15,24 @@ module.exports = {
     port: 1209
   },
   module: {
-
+    rules: [
+      {
+        test: /\.css$/,
+        use: []
+      },
+      {
+        test: /\.less$/,
+        use: []
+      },
+      {
+        test: /\.jsx?$/,
+        use: []
+      },
+      {
+        test: /\.tsx?$/,
+        use: []
+      }
+    ]
   },
   plugins: []
 }
