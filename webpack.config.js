@@ -1,4 +1,9 @@
 const path = require('path')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const { DefinePlugin } = require('webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+ 
 
 module.exports = {
   mode: 'development',
@@ -18,15 +23,26 @@ module.exports = {
     rules: [
       {
         test: /\.css$/,
-        use: []
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+        ]
       },
       {
         test: /\.less$/,
-        use: []
+        use: [
+          'style-loader',
+          'css-loader',
+          'postcss-loader',
+          'less-loader'
+        ]
       },
       {
         test: /\.jsx?$/,
-        use: []
+        use: [
+          'babel-laoder'
+        ]
       },
       {
         test: /\.tsx?$/,
@@ -34,5 +50,11 @@ module.exports = {
       }
     ]
   },
-  plugins: []
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      template: './public/index.html'
+    }),
+    new CopyWebpackPlugin()
+  ]
 }
