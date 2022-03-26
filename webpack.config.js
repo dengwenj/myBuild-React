@@ -1,3 +1,4 @@
+/* eslint-disable */ // 让 eslint 不检查这个文件
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -70,14 +71,16 @@ module.exports = {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: [
-          'babel-loader'
+          'babel-loader',
+          'eslint-loader'
         ]
       },
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
         use: [
-          'babel-loader'
+          'babel-loader',
+          'eslint-loader'
         ]
       }
     ]
