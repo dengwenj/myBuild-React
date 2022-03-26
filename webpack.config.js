@@ -102,7 +102,7 @@ module.exports = {
       ]
     }),
     new DefinePlugin({
-      BASE_URL: './'
+      BASE_URL: '"./"'
     }),
     new ReactRefreshWebpackPlugin()
   ]
