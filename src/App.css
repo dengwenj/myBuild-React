@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
+  color: #fff;
+  font-size: 20px;
+}
+
+.wrapper {
+  margin-top: 6px;
+}
+
+.info {
+  margin: 0 8px;
+  color: #82d7f7;
+}
+
