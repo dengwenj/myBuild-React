@@ -4,8 +4,8 @@
   "description": "✌️基于 webpack 自己搭建的 React 模块化开发项目",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
-    "start": "webpack serve"
+    "build": "dwj-react build",
+    "start": "dwj-react start"
   },
   "repository": {
     "type": "git",
@@ -50,6 +50,7 @@
     "@types/react-dom": "^17.0.14",
     "@types/react-router-dom": "^5.3.3",
     "core-js": "^3.21.1",
+    "dwj-react-build": "^2.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-components": "^5.3.5"
